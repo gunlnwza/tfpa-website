@@ -1,1 +1,27 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-brand-blue:   #426f96;
+  --color-brand-bright: #1c75bd;
+  --color-brand-yellow: #ffdc3e;
+  --color-brand-green:  #44ae90;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 60s linear infinite;
+}
+
+@keyframes placeholder-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-placeholder-in {
+  animation: placeholder-in 0.4s ease forwards;
+}
