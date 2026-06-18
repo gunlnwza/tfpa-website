@@ -65,6 +65,10 @@ export default function StudySchoolList() {
   return (
     <div className="space-y-4">
       <Heading level={2}>สถาบันที่ให้การอบรม</Heading>
+      <div className="space-y-1">
+        <Paragraph size="sm">TFPA รับรองสถาบันอบรม CFP® หลายแห่งทั่วประเทศ โดยแต่ละสถาบันกำหนดค่าธรรมเนียมและตารางอบรมของตนเอง</Paragraph>
+        <Paragraph size="sm">กรุณาติดต่อสถาบันอบรมโดยตรงเพื่อสอบถามรายละเอียดหลักสูตร ค่าใช้จ่าย และกำหนดการอบรมล่าสุด</Paragraph>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {schools.map(s => <SchoolCard key={s.name} s={s} />)}
       </div>

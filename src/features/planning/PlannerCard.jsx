@@ -13,7 +13,7 @@ const SPECIALTY_BADGE = {
 
 function PlannerCard({ p }) {
   return (
-    <article className="bg-white border border-gray-200 rounded-xl overflow-hidden flex flex-col hover:border-brand-bright hover:shadow-sm transition-all min-h-60">
+    <article className="bg-white border border-gray-200 rounded-xl overflow-hidden flex flex-col hover:border-brand-bright hover:shadow-sm transition-all">
       <div className="p-5 flex flex-col gap-3 flex-1">
         <div className="flex items-center gap-3">
           {p.avatar && (

@@ -29,7 +29,10 @@ function MemberSection() {
       <Heading level={2}>สมาชิกของเรา</Heading>
       <Paragraph>TFPA มีสมาชิกทั้งบุคคลและนิติบุคคลที่ร่วมกันขับเคลื่อนมาตรฐานวิชาชีพการวางแผนการเงินในประเทศไทย เราสนับสนุนการพัฒนานักวางแผนการเงินผ่านหลักสูตร AFPT™ และ CFP® พร้อมเปิดโอกาสให้องค์กรเข้าร่วมเป็นสมาชิกเพื่อส่งเสริมการพัฒนาศักยภาพบุคลากรและความรู้ทางการเงินภายในองค์กร</Paragraph>
       <ThreeMemberCards />
-      <Heading level={3} className='text-center'>สมาชิกนิติบุคคล</Heading>
+      <div className="relative flex items-center justify-center">
+        <Heading level={3}>สมาชิกนิติบุคคล</Heading>
+        <a href="#" className="absolute right-0 text-sm font-medium text-brand-bright hover:underline shrink-0">สมัครเป็นสมาชิกนิติบุคคล →</a>
+      </div>
       <CompanyMarquee />
     </Section>
   )

@@ -5,6 +5,7 @@ import Heading from '../../../components/ui/Heading'
 import Paragraph from '../../../components/ui/Paragraph'
 import CredentialPath from '../../../features/credential/CredentialPath'
 import { CredentialCTA } from '../../../features/credential/CredentialCTA'
+import OutlineCard from '../../../components/ui/OutlineCard'
 
 const benefitItems = [
   { icon: '🔍', title: 'ค้นหาลูกค้าได้ง่ายขึ้น',         desc: 'ชื่อของคุณจะปรากฏในทำเนียบนักวางแผนการเงิน CFP® ที่ประชาชนทั่วไปสามารถค้นหาเพื่อติดต่อขอคำปรึกษาได้' },
@@ -41,11 +42,11 @@ function Benefits() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {benefitItems.map(b => (
-            <div key={b.title} className="border border-gray-100 rounded-xl p-5 hover:border-brand-bright hover:shadow-sm transition-all space-y-2">
+            <OutlineCard key={b.title} className="space-y-2">
               <div className="text-3xl">{b.icon}</div>
               <Paragraph size="sm" className="font-semibold text-gray-800">{b.title}</Paragraph>
               <Paragraph size="xs" className="leading-relaxed">{b.desc}</Paragraph>
-            </div>
+            </OutlineCard>
           ))}
         </div>
       </div>
@@ -54,7 +55,7 @@ function Benefits() {
         <Heading level={2}>เอกสารที่ต้องเตรียม</Heading>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {requirements.map(r => (
-            <div key={r.title} className="border border-gray-100 rounded-xl p-5 space-y-3">
+            <OutlineCard key={r.title} className="space-y-3">
               <div className="flex items-center gap-2">
                 <span className="text-xl">{r.icon}</span>
                 <div>
@@ -69,7 +70,7 @@ function Benefits() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </OutlineCard>
           ))}
         </div>
       </div>

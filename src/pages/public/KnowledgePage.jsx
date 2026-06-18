@@ -14,7 +14,7 @@ Searching + Filtering behavior
 Pagination
 */
 
-const PAGE_SIZE = 6
+const PAGE_SIZE = 5
 
 
 function Highlight() {

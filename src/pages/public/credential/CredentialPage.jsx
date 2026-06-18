@@ -5,6 +5,7 @@ import Heading from '../../../components/ui/Heading'
 import Paragraph from '../../../components/ui/Paragraph'
 import CredentialPath from '../../../features/credential/CredentialPath'
 import { CredentialCTA } from '../../../features/credential/CredentialCTA'
+import OutlineCard from '../../../components/ui/OutlineCard'
 import cfpImg from '../../../assets/tfpa/cfp.png'
 import afptImg from '../../../assets/tfpa/afpt.jpg'
 import { Link } from 'react-router-dom'
@@ -118,11 +119,11 @@ function Testimonials() {
         </Paragraph>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {ethicsCards.map(c => (
-            <div key={c.n} className="border border-gray-100 rounded-xl p-5 hover:border-brand-bright hover:shadow-sm transition-all">
+            <OutlineCard key={c.n}>
               <Paragraph className="text-2xl !font-bold !text-[#1c757d] mb-2">{c.n}</Paragraph>
               <Paragraph size="sm" className="font-semibold text-gray-800 mb-1">{c.title}</Paragraph>
               <Paragraph size="xs" className="leading-relaxed">{c.desc}</Paragraph>
-            </div>
+            </OutlineCard>
           ))}
         </div>
       </div>

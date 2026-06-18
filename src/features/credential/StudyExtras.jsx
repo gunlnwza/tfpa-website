@@ -7,12 +7,12 @@ export function StudyTransferCredit() {
     <div className="bg-amber-50 border border-amber-100 rounded-xl p-5 flex gap-4 mt-4">
       <div className="text-2xl shrink-0">🔄</div>
       <div className="space-y-1">
-        <Paragraph size="sm" className="font-semibold text-gray-800">มีประสบการณ์ในสายงาน? เทียบโอนได้</Paragraph>
+        <Paragraph size="sm" className="font-semibold text-gray-800">มีประสบการณ์ในสายงาน? เทียบเคียงได้</Paragraph>
         <Paragraph size="xs" className="text-gray-600 leading-relaxed">
           ผู้ที่มีประสบการณ์ทำงานในสายงานการเงินและผ่านหลักสูตรที่ได้รับการรับรอง
-          สามารถขอเทียบโอนบางโมดูลได้ โดยต้องยื่นคำขอและเอกสารประกอบตามขั้นตอนของสมาคมฯ
+          สามารถขอเทียบเคียงบางโมดูลได้ โดยต้องยื่นคำขอและเอกสารประกอบตามขั้นตอนของสมาคมฯ
         </Paragraph>
-        <a href="#" className="text-xs font-semibold text-brand-bright hover:underline">ดูเงื่อนไขการเทียบโอน →</a>
+        <a href="#" className="text-xs font-semibold text-brand-bright hover:underline">ดูเงื่อนไขการเทียบเคียง →</a>
       </div>
     </div>
   )

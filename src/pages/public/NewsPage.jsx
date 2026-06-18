@@ -42,7 +42,6 @@ function EventCards() {
 
 function ContentList({ query }) {
   const [page, setPage] = useState(1)
-  const [expanded, setExpanded] = useState(false)
 
   useEffect(() => { setPage(1) }, [query])
 
@@ -58,45 +57,34 @@ function ContentList({ query }) {
   const visible = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
 
   return (
-    <div className="space-y-3">
-      <button
-        type="button"
-        onClick={() => setExpanded(e => !e)}
-        className="flex items-center gap-2 hover:text-brand-bright transition-colors"
-      >
-        <Heading level={2}>กิจกรรมที่ผ่านมา</Heading>
-        <span className={`text-gray-400 text-xs transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}>▼</span>
-      </button>
+    <div className="space-y-4">
+      <Heading level={2}>กิจกรรมที่ผ่านมา</Heading>
 
-      {expanded && (
-        <>
-          <ol className="divide-y divide-gray-100">
-            {visible.length === 0 && (
-              <li className="py-10 text-center text-gray-400 text-sm">ไม่พบเนื้อหาที่ตรงกัน</li>
-            )}
-            {visible.map((item, i) => (
-              <li key={i}>
-                <a href="#" className="flex gap-4 py-4 px-2 hover:bg-gray-50 rounded-lg transition-colors group">
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className={`text-xs font-semibold px-2 py-0.5 rounded ${TYPE_BADGE[item.type]}`}>
-                        {TYPE_LABEL[item.type]}
-                      </span>
-                      <span className="text-xs text-gray-400">{item.date}</span>
-                    </div>
-                    <div className="font-medium text-gray-800 text-sm group-hover:text-brand-bright transition-colors">
-                      {item.title}
-                    </div>
-                    <div className="text-xs text-gray-500 mt-0.5 line-clamp-1">{item.desc}</div>
-                  </div>
-                </a>
-              </li>
-            ))}
-          </ol>
+      <ol className="divide-y divide-gray-100">
+        {visible.length === 0 && (
+          <li className="py-10 text-center text-gray-400 text-sm">ไม่พบเนื้อหาที่ตรงกัน</li>
+        )}
+        {visible.map((item, i) => (
+          <li key={i}>
+            <a href="#" className="flex gap-4 py-4 px-2 hover:bg-gray-50 rounded-lg transition-colors group">
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className={`text-xs font-semibold px-2 py-0.5 rounded ${TYPE_BADGE[item.type]}`}>
+                    {TYPE_LABEL[item.type]}
+                  </span>
+                  <span className="text-xs text-gray-400">{item.date}</span>
+                </div>
+                <div className="font-medium text-gray-800 text-sm group-hover:text-brand-bright transition-colors">
+                  {item.title}
+                </div>
+                <div className="text-xs text-gray-500 mt-0.5 line-clamp-1">{item.desc}</div>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ol>
 
-          <Pagination page={page} totalPages={totalPages} onPage={setPage} />
-        </>
-      )}
+      <Pagination page={page} totalPages={totalPages} onPage={setPage} />
     </div>
   )
 }

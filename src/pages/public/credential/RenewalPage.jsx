@@ -5,6 +5,7 @@ import Heading from '../../../components/ui/Heading'
 import Paragraph from '../../../components/ui/Paragraph'
 import CredentialPath from '../../../features/credential/CredentialPath'
 import { CredentialCTA } from '../../../features/credential/CredentialCTA'
+import OutlineCard from '../../../components/ui/OutlineCard'
 
 const ethicsCards = [
   { n: '01', title: 'ยึดผลประโยชน์ลูกค้าเป็นหลัก',        desc: 'คำแนะนำต้องไม่ถูกครอบงำด้วยผลประโยชน์ส่วนตัว เป็น Fiduciary Duty ที่ผูกพันตลอดการประกอบอาชีพ' },
@@ -60,11 +61,10 @@ function Ethics() {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {ethicsCards.map(c => (
-          <div key={c.n} className="border border-gray-100 rounded-xl p-5 hover:border-brand-bright hover:shadow-sm transition-all">
-            <Paragraph className="text-2xl !font-bold !text-brand-bright/20 mb-2">{c.n}</Paragraph>
+          <OutlineCard key={c.n}>
             <Paragraph size="sm" className="font-semibold text-gray-800 mb-1">{c.title}</Paragraph>
             <Paragraph size="xs" className="leading-relaxed">{c.desc}</Paragraph>
-          </div>
+          </OutlineCard>
         ))}
       </div>
     </div>

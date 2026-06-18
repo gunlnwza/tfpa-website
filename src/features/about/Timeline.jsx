@@ -4,10 +4,13 @@ import Paragraph from '../../components/ui/Paragraph'
 
 function TimelineCard({ m }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm max-w-xs text-right space-y-1">
-      <Paragraph size="xs" className="!text-brand-blue">{m.year}</Paragraph>
-      <Heading level={3}>{m.title}</Heading>
-      <Paragraph size="sm">{m.body}</Paragraph>
+    <div className="bg-white border border-gray-200 rounded-xl shadow-sm max-w-xs text-right overflow-hidden space-y-1">
+      {m.img && <img src={m.img} alt={m.title} className="w-full h-24 object-contain object-center border-b border-gray-100" />}
+      <div className="p-4 space-y-1">
+        <Paragraph size="xs" className="!text-brand-blue">{m.year}</Paragraph>
+        <Heading level={3}>{m.title}</Heading>
+        <Paragraph size="sm">{m.body}</Paragraph>
+      </div>
     </div>
   )
 }
