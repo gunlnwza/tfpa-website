@@ -11,6 +11,7 @@ const SITEMAP = [
       { label: 'สอบ',       to: '/credential/exam' },
       { label: 'ขึ้นทะเบียน', to: '/credential/validate' },
       { label: 'ต่ออายุ',   to: '/credential/renewal' },
+      { label: 'คู่มือนักวางแผนการเงิน',   to: '/credential/guide' },
     ],
   },
   {

@@ -12,6 +12,7 @@ import StudyPage from './pages/public/credential/StudyPage'
 import ExamPage from './pages/public/credential/ExamPage'
 import ValidatePage from './pages/public/credential/ValidatePage'
 import RenewalPage from './pages/public/credential/RenewalPage'
+import PlannerGuidePage from './pages/public/credential/PlannerGuidePage'
 import PlanningPage from './pages/public/planning/PlanningPage'
 import FindPlannerPage from './pages/public/planning/FindPlannerPage'
 import KnowledgePage from './pages/public/KnowledgePage'
@@ -38,6 +39,7 @@ function App() {
         <Route path="/credential/exam" element={<ExamPage />} />
         <Route path="/credential/validate" element={<ValidatePage />} />
         <Route path="/credential/renewal" element={<RenewalPage />} />
+        <Route path="/credential/guide" element={<PlannerGuidePage />} />
 
         <Route path="/planning" element={<PlanningPage />} />
         <Route path="/planning/find_planner" element={<FindPlannerPage />} />

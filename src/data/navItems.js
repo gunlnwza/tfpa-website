@@ -7,6 +7,7 @@ const navItems = [
       { label: 'สอบ', href: '/credential/exam' },
       { label: 'ขึ้นทะเบียน', href: '/credential/validate' },
       { label: 'ต่ออายุ', href: '/credential/renewal' },
+      { label: 'คู่มือนักวางแผนการเงิน', href: '/credential/guide' },
     ],
   },
   {
